@@ -1,0 +1,13 @@
+version: "3"
+services:
+  nps:
+    image: iasuma/nps
+    container_name: nps
+    volumes: 
+      - ./conf:/etc/nps/conf:rw
+    ports: 
+      - "8080:8080"
+      - "8024:8024"
+      - "80:80"
+      - "443:443"
+    restart: always
