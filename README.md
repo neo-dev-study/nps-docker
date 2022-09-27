@@ -36,3 +36,5 @@ services:
     restart: always
 ```
 
+#### 配置下载
+[服务端配置][https://github.com/iAsuma/nps-docker/tree/master/nps/conf]
