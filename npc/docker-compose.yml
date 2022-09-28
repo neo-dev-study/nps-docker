@@ -1,0 +1,9 @@
+version: "3"
+services:
+  nps:
+    image: iasuma/npc
+    container_name: npc
+    volumes: 
+      - ./conf:/etc/npc/conf:rw
+    restart: always
+    network_mode: host
