@@ -37,5 +37,30 @@ services:
     restart: always
 ```
 
-#### 配置下载
+#### Config Download
 [服务端配置](https://github.com/iAsuma/nps-docker/tree/master/nps/conf)
+
+### 客户端启动（npc）
+
+#### Docker
+
+```
+docker run -d --name npc --net=host iasuma/npc
+```
+
+#### Docker Compose
+
+```
+version: "3"
+services:
+  nps:
+    image: iasuma/npc
+    container_name: npc
+    volumes: 
+      - ./conf:/etc/npc/conf:rw
+    restart: always
+    network_mode: host
+```
+
+#### Config Download
+[服务端配置](https://github.com/iAsuma/nps-docker/tree/master/npc/conf)
