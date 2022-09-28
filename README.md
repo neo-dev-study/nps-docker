@@ -15,7 +15,7 @@ nps是一款轻量级、高性能、功能强大的**内网穿透**代理服务�
 #### Docker
 
 ```
-docker run -d --name nps iasuma/nps
+docker run -d --name nps --net=host iasuma/nps
 ```
 
 #### Docker Compose
@@ -28,11 +28,12 @@ services:
     container_name: nps
     volumes: 
       - ./conf:/etc/nps/conf:rw
-    ports: 
-      - "8080:8080"
-      - "8024:8024"
-      - "80:80"
-      - "443:443"
+    #ports: 
+    #  - "8080:8080"
+    #  - "8024:8024"
+    #  - "80:80"
+    #  - "443:443"
+    network_mode："host"
     restart: always
 ```
 
