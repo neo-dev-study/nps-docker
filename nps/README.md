@@ -35,4 +35,4 @@ services:
 ```
 
 #### Config Download
-[服务端配置](https://github.com/iAsuma/nps-docker/tree/master/nps/conf)
+Download：[服务端配置](https://github.com/iAsuma/nps-docker/tree/master/nps/conf)

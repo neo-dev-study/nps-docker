@@ -38,7 +38,7 @@ services:
 ```
 
 #### Config Download
-[服务端配置](https://github.com/iAsuma/nps-docker/tree/master/nps/conf)
+Download：[服务端配置](https://github.com/iAsuma/nps-docker/tree/master/nps/conf)
 
 ### 客户端启动（npc）
 
@@ -63,4 +63,4 @@ services:
 ```
 
 #### Config Download
-[客户端配置](https://github.com/iAsuma/nps-docker/tree/master/npc/conf)
+Download：[客户端配置](https://github.com/iAsuma/nps-docker/tree/master/npc/conf)
