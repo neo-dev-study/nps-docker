@@ -63,4 +63,4 @@ services:
 ```
 
 #### Config Download
-[服务端配置](https://github.com/iAsuma/nps-docker/tree/master/npc/conf)
+[客户端配置](https://github.com/iAsuma/nps-docker/tree/master/npc/conf)
