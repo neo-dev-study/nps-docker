@@ -1,5 +1,5 @@
 
-# NPS docker
+# NPS
 ![](https://img.shields.io/github/stars/ehang-io/nps.svg)   ![](https://img.shields.io/github/forks/ehang-io/nps.svg)
 [![Gitter](https://badges.gitter.im/cnlh-nps/community.svg)](https://gitter.im/cnlh-nps/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
@@ -37,4 +37,4 @@ services:
 ```
 
 #### 配置下载
-[服务端配置][https://github.com/iAsuma/nps-docker/tree/master/nps/conf]
+[服务端配置](https://github.com/iAsuma/nps-docker/tree/master/nps/conf)
