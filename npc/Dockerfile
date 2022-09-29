@@ -1,22 +1,28 @@
 FROM alpine:latest
 MAINTAINER asuma
 
+ARG TARGETOS
+ARG TARGETARCH
+ARG TARGETVARIANT
+
+ARG FILE_URL=${TARGETOS}_${TARGETARCH}${TARGETVARIANT}_client.tar.gz
+
 RUN apk update \
     && apk add -U tzdata \
     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-COPY res/linux_amd64_client.tar.gz /var/tmp/
+COPY res/${FILE_URL} /var/tmp/
 
 RUN cd /var/tmp/ \
     && mkdir npc \
-    && tar -zxvf linux_amd64_client.tar.gz -C npc \
+    && tar -zxvf ${FILE_URL} -C npc \
     && cd npc \
     && mkdir /etc/npc \
     && cp -r ./conf /etc/npc/ \
     && ./npc install \
     && cd ../ \
     && rm -rf npc/ \
-    && rm linux_amd64_client.tar.gz \
+    && rm ${FILE_URL} \
     && rm /usr/bin/npc-update
 
 CMD ["npc", "-config=/etc/npc/conf/npc.conf"]
