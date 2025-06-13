@@ -1,5 +1,10 @@
-FROM alpine:latest
-MAINTAINER asuma
+FROM alpine:3.22
+
+LABEL Name="nps-client"
+LABEL Version="1.0.0"
+LABEL maintainer="asuma"
+LABEL description="NPS Client image based on alpine"
+
 
 ARG TARGETOS
 ARG TARGETARCH

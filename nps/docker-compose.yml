@@ -1,11 +1,14 @@
 version: "3"
 services:
   nps:
-    image: iasuma/nps
+    # image: iasuma/nps
+    build:
+      context: . # 指向 Dockerfile 所在目录（当前目录）
+      dockerfile: Dockerfile # 可省略，默认就是这个文件名
     container_name: nps
-    volumes: 
+    volumes:
       - ./conf:/etc/nps/conf:rw
-    ports: 
+    ports:
       - "8080:8080"
       - "8024:8024"
       - "80:80"

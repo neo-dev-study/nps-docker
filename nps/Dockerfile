@@ -1,5 +1,9 @@
-FROM alpine:latest
-MAINTAINER asuma
+FROM alpine:3.22
+
+LABEL Name="nps-server"
+LABEL Version="1.0.0"
+LABEL maintainer="asuma"
+LABEL description="NPS Server image based on alpine"
 
 RUN apk update \
     && apk add -U tzdata \

@@ -1,9 +1,12 @@
 version: "3"
 services:
   nps:
-    image: iasuma/npc
+    # image: iasuma/npc
+    build:
+      context: . # 指向 Dockerfile 所在目录（当前目录）
+      dockerfile: Dockerfile # 可省略，默认就是这个文件名
     container_name: npc
-    volumes: 
+    volumes:
       - ./conf:/etc/npc/conf:rw
     restart: always
     network_mode: host
